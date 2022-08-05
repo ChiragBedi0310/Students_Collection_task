@@ -1,0 +1,7 @@
+C:\Users\chirag.bedi\source\repos\.Net training\Day 13\TaskOnCollections_theBestWay\obj\Debug\TaskOnCollections_theBestWay.csproj.AssemblyReference.cache
+C:\Users\chirag.bedi\source\repos\.Net training\Day 13\TaskOnCollections_theBestWay\obj\Debug\TaskOnCollections_theBestWay.csproj.CoreCompileInputs.cache
+C:\Users\chirag.bedi\source\repos\.Net training\Day 13\TaskOnCollections_theBestWay\bin\Debug\TaskOnCollections_theBestWay.exe.config
+C:\Users\chirag.bedi\source\repos\.Net training\Day 13\TaskOnCollections_theBestWay\bin\Debug\TaskOnCollections_theBestWay.exe
+C:\Users\chirag.bedi\source\repos\.Net training\Day 13\TaskOnCollections_theBestWay\bin\Debug\TaskOnCollections_theBestWay.pdb
+C:\Users\chirag.bedi\source\repos\.Net training\Day 13\TaskOnCollections_theBestWay\obj\Debug\TaskOnCollections_theBestWay.exe
+C:\Users\chirag.bedi\source\repos\.Net training\Day 13\TaskOnCollections_theBestWay\obj\Debug\TaskOnCollections_theBestWay.pdb
