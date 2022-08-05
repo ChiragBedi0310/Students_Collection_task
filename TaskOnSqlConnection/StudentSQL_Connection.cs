@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -53,32 +53,9 @@ namespace TaskOnSQLConnections
             try
             {
                 conn.Open();
-                string insertString = $@"insert into Student(Name,Id,Age,Standard,City)
-                                    values({name},@Id,@Age,@Standard,@City)";
+                string insertString = $"Insert into Student values('{id}','{name}','{age}','{standard}','{city}')";
 
                 SqlCommand cmd = new SqlCommand(insertString, conn);
-                //SqlParameter Name = new SqlParameter();
-                //Name.ParameterName = "@Name";
-                //Name.Value = name;
-                SqlParameter Id = new SqlParameter();
-                Id.ParameterName = "@Id";
-                Id.Value = id;
-                SqlParameter Age = new SqlParameter();
-                Age.ParameterName = "@Age";
-                Age.Value = age;
-                SqlParameter Standard = new SqlParameter();
-                Standard.ParameterName = "@Standard";
-                Standard.Value = standard;
-                SqlParameter City = new SqlParameter();
-                City.ParameterName = "@City";
-                City.Value = city;
-
-
-                //cmd.Parameters.Add(Name);
-                cmd.Parameters.Add(Id);
-                cmd.Parameters.Add(Age);
-                cmd.Parameters.Add(Standard);
-                cmd.Parameters.Add(City);
 
                 int n = cmd.ExecuteNonQuery();
                 if (n > 0)
@@ -110,20 +87,9 @@ namespace TaskOnSQLConnections
             {
                 conn.Open();
 
-                string UpdateString = @"update Student
-                                        set Age = @Age
-                                        where Id = @Id";
+                string UpdateString = $"update Student set Age = '{age}' where Id = '{id}";
 
                 SqlCommand cmd = new SqlCommand(UpdateString,conn);
-                SqlParameter Age = new SqlParameter();
-                Age.ParameterName = "@Age";
-                Age.Value = age;
-                SqlParameter Id = new SqlParameter();
-                Id.ParameterName = "@Id";
-                Id.Value = id;
-
-                cmd.Parameters.Add(Age);
-                cmd.Parameters.Add(Id);
 
                 int n = cmd.ExecuteNonQuery();
                 if (n > 0)
@@ -155,20 +121,9 @@ namespace TaskOnSQLConnections
             {
                 conn.Open();
 
-                string UpdateString = @"update Student
-                                        set Age = @City
-                                        where Id = @Id";
+                string UpdateString = $"update Student set City = '{city}' where Id = '{id}'";
 
                 SqlCommand cmd = new SqlCommand(UpdateString, conn);
-                SqlParameter City = new SqlParameter();
-                City.ParameterName = "@City";
-                City.Value = city;
-                SqlParameter Id = new SqlParameter();
-                Id.ParameterName = "@Id";
-                Id.Value = id;
-
-                cmd.Parameters.Add(City);
-                cmd.Parameters.Add(Id);
 
                 int n = cmd.ExecuteNonQuery();
                 if (n > 0)
@@ -200,15 +155,9 @@ namespace TaskOnSQLConnections
             {
                 conn.Open();
 
-                string DeleteString = @"delete from Student
-                                        where Id = @Id";
+                string DeleteString = $"delete from Student where Id = '{id}'";
 
                 SqlCommand cmd = new SqlCommand(DeleteString,conn);
-                SqlParameter Id = new SqlParameter();
-                Id.ParameterName = "@Id";
-                Id.Value = id;
-
-                cmd.Parameters.Add(Id);
 
                 int n = cmd.ExecuteNonQuery();
                 if (n > 0)
